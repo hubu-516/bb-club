@@ -1,8 +1,14 @@
-const express = require('express');
+//引用express
+const express = require('express');                                 
 const app = express();
-var __dirname = 'G:\\c\\bbclub';
-app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+//引入根目录
+app.use(express.static('../public'));                               
+
+
+//开始监听5555端口
+app.listen(5555, () => {
+    console.log('Server is running on port 5555');                  
 });
+
+
