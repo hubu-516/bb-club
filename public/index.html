@@ -4,7 +4,8 @@
 <meta charset="utf-8"> 
 <title>BB-CLUB</title> 
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-
+<script type="module" src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,16 +17,19 @@
 <div class="bar_left">
    <ul>
     <li><a href="index.html">首页</a></li>
-    <li><a>帖子</a></li>
+    <li><a href="post.html">帖子</a></li>
     <li><a>个人信息</a></li>
     <li><a>搜索</a></li>
     </ul>
 </div>
-<div>
-<div class="center_div">
+<div id="digest">
+<a href="post_view.html?post=1" class="a_black">
+<div  class="center_div">
     <span class="post_ref_title">示例标题<br></span>
-    <span style="font-size: 20px;"> 网站应包含登录注册，帖子的发布与管理，管理员的后台管理···</span>
+    <span style="font-size: 20px;"> 网站应包含登录注册，帖子的发布与管理，管理员的后台管理···<br></span>
+    <span class="post_ref_info">作者：admin 发布时间：2020-12-12 12:12:12</span>
 </div>
+</a>
 </div>
 </div>
 </body>
