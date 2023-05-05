@@ -23,6 +23,23 @@ marked.setOptions({
 
 // 从服务器获取markdown文件
 $.get("/post/"+post_id+".md",function(data,status){
-    var markedHtml = marked.parse(data)
-    document.getElementById("mdviewer").innerHTML=markedHtml
+    // var markedHtml = marked.parse(data);
+    // document.getElementById("mdviewer").innerHTML=markedHtml;
+    var testEditor;
+    $(function () {
+        testEditor = editormd.markdownToHTML("doc-content", {//注意：这里是上面DIV的id
+            markdown:data,
+            
+            path    : "module/editor.md/lib/",
+            htmlDecode: "style,script,iframe",
+            width   : "80%",
+            emoji: true,
+            taskList: true,
+            tex: true, // 默认不解析
+            flowChart: true, // 默认不解析
+            sequenceDiagram: true, // 默认不解析
+            codeFold: true,
+    });});
 });
+
+

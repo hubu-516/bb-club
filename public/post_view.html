@@ -3,30 +3,56 @@
 <head>
 <meta charset="utf-8"> 
 <title>BB-CLUB</title> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9697349664926776"
+     crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 <script src="./js/marked.min.js"></script>
 <script type="module" src="./js/md_reader.js"></script>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="module" src="js/checkcookie.js"></script>
 </head>
-
+<header>
+    <div class="bar_top">
+        <ul class="bar_top">
+         <li><a href="index.html">首页</a></li>
+         <li><a href="post.html?page=1">帖子</a></li>
+         <li><a href="information.html">个人信息</a></li>
+         <li><a href="search.html">搜索</a></li>
+         <li><a href="post_edit.html" target="_blank">发帖</a></li>
+         </ul>
+     </div>
+</header>
 <body>
+	<a id="logout" style="float:right;cursor: pointer;color: red;"></a>
+	<a id="user_name" href="login.html" style="float:right">登录</a>
 <div id="container_main">
 <div>
     <h1 class="center">BB-CLUB</h1>
-    <a href="login.html" style="float:right">登录</a>
-</div>
-<div class="bar_left">
-   <ul>
-    <li><a href="index.html">首页</a></li>
-    <li><a>帖子</a></li>
-    <li><a>个人信息</a></li>
-    <li><a href="search.html">搜索</a></li>
-    </ul>
-</div>
-<div>
-<div id="mdviewer" class="center_div" style="cursor:auto; background-color:whitesmoke;"></div>
     
 </div>
+
+<!-- <div>
+    <div id="mdviewer" class="center_div" style="cursor:auto; background-color:whitesmoke;"></div>
+    
+    </div> -->
+
+<link rel="stylesheet" href="module/editor.md/css/editormd.min.css"/>
+<div id="doc-content" style="background-color:whitesmoke;">
+<textarea style="display:none;">
+ ## 1324
+      
+</textarea>
+</div>
+<script src="module/editor.md/lib/flowchart.min.js"></script>
+<script src="module/editor.md/lib/jquery.flowchart.min.js"></script>
+<script src="module/editor.md/lib/marked.min.js"></script>
+<script src="module/editor.md/lib/prettify.min.js"></script>
+<script src="module/editor.md/lib/raphael.min.js"></script>
+<script src="module/editor.md/lib/sequence-diagram.min.js"></script>
+<script src="module/editor.md/lib/underscore.min.js"></script>
+<script src="module/editor.md/editormd.min.js"></script>
+
+
 
 </div>
 </body>

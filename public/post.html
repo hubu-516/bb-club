@@ -6,17 +6,18 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9697349664926776"
      crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-<script type="module" src="js/main.js"></script>
+<script type="module" src="js/post.js"></script>
 <script src="js/post_get.js"></script>
 <script src="js/jquery.min.js"></script>
-<script type="module" src="js/search.js"></script>
 <script type="module" src="js/checkcookie.js"></script>
 </head>
 
 <body>
-    <a id="logout" style="float:right;cursor: pointer;color: red;"></a>
+	<a id="logout" style="float:right;cursor: pointer;color: red;"></a>
 	<a id="user_name" href="login.html" style="float:right">登录</a>
+
 <div id="container_main">
+    
 <div>
     <h1 class="center">BB-CLUB</h1>
 </div>
@@ -29,19 +30,29 @@
     <li><a href="post_edit.html" target="_blank">发帖</a></li>
     </ul>
 </div>
+<p id="num_total"></p>
 
-<div>
-
-<!-- 搜索框 -->
-<div id="search_bar" class="search_bar">
-    <input class="search_input" type="text" id="search_input" onkeydown="if(event.keyCode===13){search();}" placeholder="请输入搜索内容" >
-    <button class="button" onclick="search();" id="search_button">搜索</button>
+<!-- 帖子列表块 -->
+<div id="post" >
+<a href="post_view.html?post=1" class="a_black">
+<div  class="center_div">
+    <span class="post_ref_title">示例标题<br></span>
+    <span style="font-size: 20px;"> 网站应包含登录注册，帖子的发布与管理，管理员的后台管理···<br></span>
+    <span class="post_ref_info">作者：admin 发布时间：2020-12-12 12:12:12</span>
 </div>
-
-<!-- 搜索结果块 -->
-<div id="post_searched">
+</a>
 
 </div>
+<!-- 翻页块 -->
+<div id="page_line" class="page_line">
+    <ul class="page_line">
+        <li><a id="turnleft">«</a></li>
+        <li id="page1"><a href="?page=1" id="page_a1">1</a></li>
+        <li><a id="turnright">»</a></li>
+    </ul>
+    </div>
+
+
 </div>
 </body>
 </html>

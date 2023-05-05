@@ -6,17 +6,18 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9697349664926776"
      crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-<script type="module" src="js/main.js"></script>
+<script type="module" src="js/information.js"></script>
 <script src="js/post_get.js"></script>
 <script src="js/jquery.min.js"></script>
-<script type="module" src="js/search.js"></script>
 <script type="module" src="js/checkcookie.js"></script>
 </head>
 
 <body>
-    <a id="logout" style="float:right;cursor: pointer;color: red;"></a>
+	<a id="logout" style="float:right;cursor: pointer;color: red;"></a>
 	<a id="user_name" href="login.html" style="float:right">登录</a>
+
 <div id="container_main">
+    
 <div>
     <h1 class="center">BB-CLUB</h1>
 </div>
@@ -29,18 +30,12 @@
     <li><a href="post_edit.html" target="_blank">发帖</a></li>
     </ul>
 </div>
-
-<div>
-
-<!-- 搜索框 -->
-<div id="search_bar" class="search_bar">
-    <input class="search_input" type="text" id="search_input" onkeydown="if(event.keyCode===13){search();}" placeholder="请输入搜索内容" >
-    <button class="button" onclick="search();" id="search_button">搜索</button>
+<div id="information">
+<a href="post_view.html?post=1" class="a_black">
+<div  class="center_div">
+    <span class="post_ref_title">游客<br></span>  
 </div>
-
-<!-- 搜索结果块 -->
-<div id="post_searched">
-
+</a>
 </div>
 </div>
 </body>

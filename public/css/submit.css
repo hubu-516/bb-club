@@ -1,0 +1,31 @@
+#post_title
+ {
+
+width: 20%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+#post_detail
+ {
+
+width: 65%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+
+.form input[type="submit"] {
+    width: 7%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    }

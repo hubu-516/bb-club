@@ -52,9 +52,14 @@ li a:hover
     background-color: #53b43a;
     color: #f1f1f1;
 }
+.bar_left ul li a:hover
+{
+    background-color: #53b43a;
+    color: #f1f1f1;
+}
 
 /* 列表项样式 */
-li a
+.bar_left ul li a
 {
     display: block;
     width: 100%;
@@ -70,6 +75,37 @@ li a
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
+
+.bar_top ul li a
+{
+    display: inline-block;
+    width:15%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-decoration: none;
+    color: #53b43a;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 0;
+}
+ul.bar_top li
+{
+    display: inline;
+    padding: 0;
+}
+ul.bar_top
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
 .center_div
 {
     /* 背景框 */
@@ -87,7 +123,9 @@ li a
     white-space: pre-wrap;
     cursor: pointer;
 }
+
 .bar_left
+
 {
     float: left;
     width: 20%;
@@ -165,4 +203,42 @@ li a
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid rgb(218, 212, 212);
     cursor: pointer;
+}
+
+#num_total
+{
+    margin-left: 25%;
+}
+
+.page_line
+{
+    margin-left:  25%;
+    margin-right: 2%;
+    margin-top: 1%;
+    cursor: pointer;
+    
+}
+ul.page_line
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+ul.page_line li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+ul.page_line li
+{
+    display: inline;
+
+}
+ul.page_line a.active
+{
+    background-color: #53b43a;
+    color: #f1f1f1;
 }
