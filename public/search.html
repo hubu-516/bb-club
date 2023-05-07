@@ -9,15 +9,14 @@
 <script type="module" src="js/main.js"></script>
 <script src="js/post_get.js"></script>
 <script src="js/jquery.min.js"></script>
+<script type="module" src="js/search.js"></script>
 <script type="module" src="js/checkcookie.js"></script>
 </head>
 
 <body>
-	<a id="logout" style="float:right;cursor: pointer;color: red;"></a>
+    <a id="logout" style="float:right;cursor: pointer;color: red;"></a>
 	<a id="user_name" href="login.html" style="float:right">登录</a>
-
 <div id="container_main">
-    
 <div>
     <h1 class="center">BB-CLUB</h1>
 </div>
@@ -30,14 +29,18 @@
     <li><a href="post_edit.html" target="_blank">发帖</a></li>
     </ul>
 </div>
-<div id="digest">
-<a href="post_view.html?post=1" class="a_black">
-<div  class="center_div">
-    <span class="post_ref_title">示例标题<br></span>
-    <span style="font-size: 20px;"> 网站应包含登录注册，帖子的发布与管理，管理员的后台管理···<br></span>
-    <span class="post_ref_info">作者：admin 发布时间：2020-12-12 12:12:12</span>
+
+<div>
+
+<!-- 搜索框 -->
+<div id="search_bar" class="search_bar">
+    <input class="search_input" type="text" id="search_input" onkeydown="if(event.keyCode===13){search();}" placeholder="请输入搜索内容" >
+    <button class="button" onclick="search();" id="search_button">搜索</button>
 </div>
-</a>
+
+<!-- 搜索结果块 -->
+<div id="post_searched">
+
 </div>
 </div>
 </body>
