@@ -158,6 +158,8 @@ app.get('/post.html/post',function(req,res){
     
 });
 
+
+
 //返回用户信息
 app.get('/information',function(req,res){
     var sql = 'SELECT * FROM account.user WHERE username = ?';
@@ -171,6 +173,8 @@ app.get('/information',function(req,res){
 	});
 	}
 });
+
+
 
 //处理发布的帖子
 app.post('/post_submit',function(req,res){
