@@ -6,3 +6,4 @@ package-lock.json
 post/
 public/module/
 server/database.js
+cfile/
