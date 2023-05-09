@@ -6,14 +6,17 @@ const db_post=mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'516..',
-    database:'post'
+    database:'post',
+    timezone:"SYSTEM"
 });
 
+//创建account数据库连接
 const db_account=mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'516..',
-    database:'account'
+    database:'account',
+    timezone:"SYSTEM"
 });
 
 //设置post数据库对外接口

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"> 
 <title>BB-CLUB</title> 
+<link rel="shortcut icon" href="./pic/logo/logo_mini.png">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9697349664926776"
      crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -23,13 +24,28 @@
      </div>
 </header>
 <body>
-	<a id="logout" style="float:right;cursor: pointer;color: red;"></a>
-	<a id="user_name" href="login.html" style="float:right">登录</a>
-<div id="container_main">
-<div>
-    <h1 class="center">BB-CLUB</h1>
+    <div class="box">
+        <div class="logo item">
+          <a href="/index.html" class="center" ><img src="./pic/logo/logo.png"></a>
+        </div>
+      <div class="server_bar item">
+        <div>
+          <input id="search_input_mini" type="text" placeholder="开始搜索吧">
+          <button onclick='window.location.href="/search.html?search="+$("#search_input_mini").val();' >&#128517;</button>
+           </div>   
+        </div>     
     
-</div>
+        
+     <div class="item">
+        <a id="logout"class="login" style="cursor: pointer;">注销</a>
+      </div>
+       <div class="item">
+        <a id="user_name" href="login.html" class="login">登录</a>
+      </div>
+           
+    
+      
+    </div>
 
 <!-- <div>
     <div id="mdviewer" class="center_div" style="cursor:auto; background-color:whitesmoke;"></div>

@@ -103,6 +103,7 @@ app.post('/login',function(req,res){
         {
             if(result.length>0)
             {
+                //利用http修改用户浏览器cookie,并且利用httponly保证了安全性
                 res.cookie('cookie_user',result[0].username,{httpOnly:true,maxAge:7*86400*1000});
                 res.redirect('/index.html');
             }

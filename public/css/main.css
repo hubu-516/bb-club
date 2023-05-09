@@ -15,15 +15,6 @@
 
 .center
 {
-  
-    font-size: 50px;
-    font-weight: bold;
-    color: #53b43a;
-    font-family: Arial, Helvetica, sans-serif;
-	  text-align:left;
-  
-
-
     /* 外边距 */
     margin-left:  0;
     margin-right: 0;
@@ -61,11 +52,11 @@ li a:hover
   display:flex;
   margin-right:auto;
 }
+
 .bar_left ul li a
 {
-    display: block;
-    width: 100%;
-    height:  50px;
+    display: flex;
+    height:  40px;
     line-height: 110px;
     text-align: center;
     background-color: #f9f9f9;
@@ -76,8 +67,8 @@ li a:hover
     line-height: 22.5px;
     padding-top: 20px;
     padding-bottom: 12px;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .bar_top ul li a
@@ -131,11 +122,11 @@ ul.bar_top
 {
     float: left;
     width: 12%;
-    height: 100%;
+    height:900px;
     /* 背景框 */
     background-color: #f9f9f9;
     margin-left: 0;
-
+    
 }
 .post_ref_title
 {
@@ -156,7 +147,7 @@ ul.bar_top
 {
     /* 外边距 */
     /* margin:10%; */
-   
+   margin-top: 0;
 	margin: 0 auto;
 }
 
@@ -165,17 +156,17 @@ ul.bar_top
 {
 
 
-    box-shadow: 0 0 2px rgb(134, 131, 131);
+    box-shadow: 0 0 2px rgb(219, 214, 214);
     /* 内边距 */
     padding: 20px;
     /* 外边距 */
     margin: 20px;
-    margin-left: 25%;
+    
 }
 
 .search_input
 {
-    width: 80%;
+    width: 60%;
     height: 70%;
     line-height: 70%;
     text-align: left;
@@ -187,7 +178,7 @@ ul.bar_top
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid rgb(218, 212, 212);
-
+    margin-left: 5%;
 }
 .button
 {
@@ -268,7 +259,7 @@ ul.page_line a.active
 }
 
 
-.server_bar form {
+.server_bar div {
   position: relative;
   width: 300px;
   margin: 0 auto;
