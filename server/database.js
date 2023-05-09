@@ -5,7 +5,7 @@ const mysql = require('mysql');
 const db_post=mysql.createConnection({
     host:'localhost',
     user:'root',
-    password:'...',
+    password:'516..',
     database:'post',
     timezone:"SYSTEM"
 });
@@ -14,7 +14,7 @@ const db_post=mysql.createConnection({
 const db_account=mysql.createConnection({
     host:'localhost',
     user:'root',
-    password:'...',
+    password:'516..',
     database:'account',
     timezone:"SYSTEM"
 });
