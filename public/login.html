@@ -1,0 +1,50 @@
+
+
+
+
+
+  <!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Login</title>
+    <script src="./js/jquery.min.js"></script>
+    <script type="module" src="./js/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+
+  </head> 
+<body> 
+    <div class="container"> 
+        <div class="form" id="login-container"> 
+        <img src="./pic/logo/logo_mini.svg">
+    <form id="login_form" action="/login" method="post" autocomplete="on"> 
+        <p id="login_error"></p>
+        <input type="email" id="email" name="email" placeholder="邮箱" required >    
+        <input type="password" id="password" name="password" placeholder="密码" required> 
+        <input type="submit" style="cursor: pointer;" value="登录">
+     </form> 
+        <p>没有账户? <a href="#" id="register-link">点击注册</a></p>
+    </div>
+
+
+
+<div class="container" style="display:none" id="register-container">
+  <div class="form">
+    <img src="./pic/logo/logo_mini.svg">
+    <form action="/register" method="post" >
+      <input type="text" id="new_username" name="new_username" placeholder="用户名" required>
+      <input type="email" id="new_email" name="new_email" placeholder="邮箱" required>
+      <input type="password" id="new-password" name="new_password" minlength="8" placeholder="密码" required>
+      <input type="password" id="password_again" name="password_again" pattern="0" title="两次密码不一致" placeholder="重复密码" required> 
+      <input type="submit" style="cursor: pointer;" value="注册">
+    </form>
+    <p>已经有账户了? <a href="#" id="login-link">点击登录</a></p>
+  </div>
+</div>
+</div>
+
+
+
+    </body>
+
+</html> 
