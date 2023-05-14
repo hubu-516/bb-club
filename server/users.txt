@@ -1,0 +1,2 @@
+qlwd
+setterm
