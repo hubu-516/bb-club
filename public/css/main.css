@@ -101,6 +101,9 @@ ul.bar_top
     text-align: center;
 }
 
+
+
+
 .center_div
 {
     /* 背景框 */
@@ -116,6 +119,8 @@ ul.bar_top
     white-space: pre-wrap;
     cursor: pointer;
 }
+
+
 
 .bar_left
 
@@ -142,13 +147,35 @@ ul.bar_top
     font-weight:lighter;/* 变细 */ 
     font-family:"微软雅黑";
     text-align:right;
+    padding:0;
 }
 #container_main
 {
+    width: 100%;
+    float: left;
     /* 外边距 */
     /* margin:10%; */
    margin-top: 0;
 	margin: 0 auto;
+}
+#container_Bottle
+{
+    width: 78%;
+    float: left;
+    /* 外边距 */
+    /* margin:10%; */
+   margin-top: 0;
+	margin: 0 auto;
+}
+
+.comment_input
+{
+    font-size:20px;
+    font-family: "微软雅黑";
+    width: 60%;
+    height: 90px;
+    margin-left: 2%;
+    resize:none;
 }
 
 /* 搜索栏 */

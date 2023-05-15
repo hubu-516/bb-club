@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>BB-CLUB</title> 
+<link rel="shortcut icon" href="../pic/logo/logo_mini.png">
+<script type="module" src="js/main.js"></script>
+<script src="js/post_get.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="module" src="./js/checkcookie.js"></script>
+
+</head>
+
+<body>
+  <div class="box">
+    <div class="logo item">
+    <a href="/index.html" class="center" ><img src="./pic/logo/logo.png"></a>
+    </div>
+  <div class="server_bar item">
+   <div>
+  <input id="search_input_mini" type="text" placeholder="开始搜索吧">
+  <button onclick='window.location.href="/search.html?search="+$("#search_input_mini").val();' >&#128517;</button>
+   </div>  
+    </div>     
+    
+ <div class="item">
+	<a id="logout"class="login" style="cursor: pointer;">注销</a>
+  </div>
+   <div class="item">
+	<a id="user_name" href="login.html" class="login">登录</a>
+  </div>
+</div>
+  
+<hr style="border:0;padding-top: 2px;background:linear-gradient(to right,transparent,#d0d0d5,transparent);"/>
+
+
+  
+<div id="container_main">
+
+</div>
+
+
+</body>
+</html>

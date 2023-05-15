@@ -7,3 +7,4 @@ post/
 public/module/
 server/database.js
 cfile/
+server/build/

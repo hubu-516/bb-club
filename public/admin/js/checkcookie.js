@@ -37,3 +37,6 @@ $.get('/checkcookie',function(data,status){
 		}
 	}
 	});
+
+
+
