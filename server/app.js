@@ -32,12 +32,13 @@ db.db_account.connect(status => {
     console.log('Database(account):'+status);
 });
 
+
 //定义sql搜索函数
 function sql_search(sql,res)
 {   
     db.db_post.query(sql,(err,result)=>{
         if(err){res.send(err);}
-        res.send({code:200,data:result,message:'获取成功'})
+        res.send({code:200,data:result,message:'获取成功'});
     });
 };
 
@@ -218,6 +219,33 @@ app.post('/post_submit',function(req,res){
         }
     });
 
+});
+
+//处理获取评论
+app.get('/comment_get',function(req,res){
+    var sql= 'SELECT * FROM post.post_comment WHERE comment_post = ?';
+    db.db_post.query(sql,[req.query.comment_post],(err,result)=>{
+        if(err)
+        {}
+        res.send({code:200,data:result,message:'获取成功'});
+    });
+});
+
+//处理评论发布
+app.post('/comment_submit',function(req,res){
+    var sql = 'INSERT INTO post_comment (comment_content,comment_author,comment_post) VALUES (?,?,?)';
+    db.db_post.query(sql,[req.body.comment_content,req.cookies.cookie_user,req.body.comment_post],(err,result)=>{
+        if(err)
+        {
+            res.send({code:-198,message:err.sqlMessage});
+            console.log(err);
+        }
+        else
+        {
+            res.send({code:201});
+        }
+        
+    });
 });
 
 //开始监听5555端口

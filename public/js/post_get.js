@@ -8,4 +8,3 @@ if(status=='success'){
     document.getElementById(content).innerHTML=html;
 }
 };
-module.exports.post_get = post_get;
