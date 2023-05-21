@@ -42,9 +42,20 @@
 </div>
 <div class="form"> 
     <label for="post_title">帖子名:</label> 
-    <input type="text" id="post_title" name="post_title" required> 
+    <input type="text" id="post_title" name="post_title" required><br>
     <label for="post_detail">简介:</label> 
-    <input type="text" id="post_detail" name="post_detail" required> 
+    <input type="text" id="post_detail" name="post_detail" required><br>
+    <label for="post_tag">板块:</label> 
+    <select id="post_tag" name="post_tag" >
+        <option value="技术">技术</option>
+        <option value="日志">日志</option>
+        <option value="故事">故事</option>
+        <option value="科学">科学</option>
+        <option value="校园">校园</option>
+        <option value="文学">文学</option>
+        <option value="音乐">音乐</option>
+        <option value="其他">其他</option>
+    </select><br>
     <input type="submit" value="发表">
 </div>
 </form>
