@@ -106,6 +106,7 @@ app.post('/login',function(req,res){
             {
                 //利用http修改用户浏览器cookie,并且利用httponly保证了安全性
                 res.cookie('cookie_user',result[0].username,{httpOnly:true,maxAge:7*86400*1000});
+                res.cookie('cookie_vip',result[0].vip,{httpOnly:true,maxAge:7*86400*1000});
                 res.redirect('/index.html');
             }
             else
@@ -123,7 +124,7 @@ app.get('/checkcookie',function(req,res){
     db.db_account.query(sql,[req.cookies.cookie_user],(err,result)=>{
         if(result.length>0)
         {
-            res.send({code:199,username:req.cookies.cookie_user});
+            res.send({code:199,username:req.cookies.cookie_user,vip:req.cookies.cookie_vip});
         }
         else
         {
@@ -142,21 +143,43 @@ app.get('/logout',function(req,res){
 
 //返回帖子总数
 app.get('/post/num_total',function(req,res){
-    var sql = 'SELECT COUNT(*) FROM post.post_detail'
-    db.db_post.query(sql,(err,result)=>{
+    if(req.query.tag==''||req.query.tag == "全部")
+    {
+        var sql = 'SELECT COUNT(*) FROM post.post_detail';
+    }
+    else
+    {
+        var sql = 'SELECT COUNT(*) FROM post.post_detail WHERE post_tag = ?';
+    }
+    db.db_post.query(sql,[req.query.tag],(err,result)=>{
     res.send({num_total:result[0]['COUNT(*)']});
     });
 });
 
 //处理帖子请求
 app.get('/post.html/post',function(req,res){
-    var sql = 'SELECT * FROM post.post_detail limit ?,?';
-    db.db_account.query(sql,[(req.query.page-1)*5,5],(err,result)=>{
-        if(err)
-        {   
-        }
-        res.send({code:200,data:result,message:'获取成功'});
-    });
+    if(req.query.tag==''||req.query.tag == "全部")
+    {
+        var sql = 'SELECT * FROM post.post_detail limit ?,?';
+        db.db_account.query(sql,[(req.query.page-1)*5,5],(err,result)=>{
+            if(err)
+            {   
+            }
+            res.send({code:200,data:result,message:'获取成功'});
+        });
+    }
+    else
+    {
+        var sql = 'SELECT * FROM post.post_detail WHERE post_tag = ? limit ?,? ';
+        db.db_account.query(sql,[req.query.tag,(req.query.page-1)*5,5],(err,result)=>{
+            if(err)
+            {   
+            }
+            res.send({code:200,data:result,message:'获取成功'});
+        });
+    }
+
+    
     
 });
 
@@ -193,8 +216,8 @@ app.post('/post_submit',function(req,res){
             else
             {
                 //向数据库写入索引
-                sql = 'INSERT INTO post.post_detail (post_title,post_introduction,post_author) VALUES (?,?,?)';
-                db.db_account.query(sql,[req.body.post_title,req.body.post_detail,req.cookies.cookie_user],(err,result)=>{
+                sql = 'INSERT INTO post.post_detail (post_title,post_introduction,post_author,post_tag) VALUES (?,?,?,?)';
+                db.db_account.query(sql,[req.body.post_title,req.body.post_detail,req.cookies.cookie_user,req.body.post_tag],(err,result)=>{
                     if(err){res.send(err);return;}
                     else
                     {
@@ -248,7 +271,7 @@ app.post('/comment_submit',function(req,res){
     });
 });
 
-//开始监听5555端口
+
 app.listen(80, () => {
     console.log('Server is running on port 80');                  
 });

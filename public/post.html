@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 <script type="module" src="js/post.js"></script>
+<script  src="js/post.js"></script>
 <script src="js/post_get.js"></script>
 <script src="js/jquery.min.js"></script>
 <script type="module" src="js/checkcookie.js"></script>
@@ -48,9 +49,25 @@
     <li><a href="search.html"><img src="./pic/icon/search.svg" style="padding: 3px;"><span>搜索</span></a></li>
     <li><a href="post_edit.html" target="_blank"><img src="./pic/icon/edit.svg" style="padding: 3px;"><span>发帖</span></a></li>
     <li><a href="bottle.html"><img src="./pic/icon/bottle.svg" style="padding: 3px;"><span>漂流瓶</span></a></li>
+    <li><a style="cursor:pointer;" id="bash" ><img src="./pic/icon/console.svg" style="padding: 3px;"><span>终端</span></a></li>
     </ul>
 </div>
 <p id="num_total"></p>
+
+
+<div class="nav">
+    <a onclick="url_add('全部');">全部</a>
+    <a onclick="url_add('技术');">技术</a>
+    <a onclick="url_add('日志');">日志</a>
+    <a onclick="url_add('故事');">故事</a>
+    <a onclick="url_add('科学');">科学</a>
+    <a onclick="url_add('校园');">校园</a>
+    <a onclick="url_add('文学');">文学</a>
+    <a onclick="url_add('音乐');">音乐</a>
+    <a onclick="url_add('其他');">其他</a>   
+
+</div>
+
 
 <!-- 帖子列表块 -->
 <div id="post" >
@@ -58,7 +75,7 @@
 <div  class="center_div">
     <span class="post_ref_title">示例标题<br></span>
     <span style="font-size: 20px;"> 网站应包含登录注册，帖子的发布与管理，管理员的后台管理···<br></span>
-    <span class="post_ref_info">作者：admin 发布时间：2020-12-12 12:12:12</span>
+    <span class="post_ref_info">作者：admin 发布时间：2023-12-12 12:12:12</span>
 </div>
 </a>
 

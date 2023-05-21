@@ -8,6 +8,16 @@ border-radius: 5px;
 border: 1px solid #ccc;
 font-size: 16px;
 }
+#post_tag
+ {
+
+width: 10%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
 #post_detail
  {
 
@@ -18,6 +28,7 @@ border-radius: 5px;
 border: 1px solid #ccc;
 font-size: 16px;
 }
+
 
 .form input[type="submit"] {
     width: 7%;
