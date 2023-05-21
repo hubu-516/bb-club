@@ -11,6 +11,20 @@ $('#logout').click(function(){
 	
 });
 
+$('#bash').click(function(){
+
+	$.get('/checkcookie',function(data,status){
+		if(data.code==199&& data.vip==1)
+		{
+			window.open('http://qlwd.club:7680/bash','_blank','location=no');
+			
+		}
+		else
+		{
+			alert("请先登录vip账户再开启终端");
+		}
+	});
+});
 
 $.get('/checkcookie',function(data,status){
 	if(data.code==199)
